@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pawfect Cup - A Cozy Pet Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&family=Pacifico&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="paw-loader"><div class="paw"></div></div>
+    </div>
+
+    <header id="hero-section" class="hero-section">
+        <div class="hero-content">
+            <h1 class="animate-on-scroll">The Pawfect Cup</h1>
+            <p class="tagline animate-on-scroll">Every sip helps a furry friend find a home.</p>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#experience">The Experience</a></li>
+            <li><a href="#residents">Our Friends</a></li>
+            <li><a href="#feedback">Guestbook</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#booking">Book a Visit</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="section bg-light">
+            <div class="container animate-on-scroll">
+                <h2 class="text-center">A Note from Our Founders...</h2>
+                <div class="founders-wrapper">
+                    <div class="founder-pet"><div class="founder-image cat-founder"></div><span class="founder-name">Mittens</span></div>
+                    <div class="founder-letter">
+                        <p>Hi there! We're Mittens & Buster, the real bosses around here. We told our humans we needed a cozy place for our friends to find their forever families... and for the humans to get good coffee, too!</p>
+                        <div class="signature"><p>Wags & Purrs,</p><p>Mittens & Buster 🐾</p></div>
+                    </div>
+                    <div class="founder-pet"><div class="founder-image dog-founder"></div><span class="founder-name">Buster</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="animate-on-scroll text-center">The Pawfect Experience</h2>
+                <div class="tabs-container animate-on-scroll">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="cafe">The Café Corner ☕</button>
+                        <button class="tab-btn" data-tab="sanctuary">The Pet Sanctuary 🐾</button>
+                        <button class="tab-btn" data-tab="patio">The Play Patio 🎾</button>
+                    </div>
+                    <div class="tab-content active" id="cafe">
+                        <h3>Premium Coffee & Cozy Vibes</h3>
+                        <p>Relax in our comfortable seating area with a specialty latte and a freshly baked treat. It's the perfect spot to work, study, or catch up with friends.</p>
+                        <button class="btn btn-secondary" id="open-menu-btn">View Full Menu</button>
+                    </div>
+                    <div class="tab-content" id="sanctuary">
+                        <h3>Meet Your New Best Friend</h3>
+                        <p>Our indoor sanctuary is a calm space where our adoptable pets relax. For a small entry fee that supports their care, you can book a session to cuddle and play.</p>
+                    </div>
+                    <div class="tab-content" id="patio">
+                        <h3>Fun in the Sun!</h3>
+                        <p>Bring your own well-behaved dog to our secure outdoor play patio! It's a great place for them to socialize while you enjoy a coffee.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section id="residents" class="section bg-light">
+           <div class="container">
+               <h2 class="animate-on-scroll text-center">Meet Our Adorable Residents</h2>
+               <div class="carousel-container">
+                   <button id="prev-btn" class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                   <div class="carousel-track">
+                       <div class="carousel-slide" data-pet="mittens">
+                           <div class="resident-card-new">
+                               <div class="card-image-wrap">
+                                   <img src="ruby.webp" alt="A fluffy cat named Mittens">
+                                   <i class="hunt-icon fas fa-coffee hidden" data-icon="coffee"></i>
+                               </div>
+                               <div class="card-details">
+                                   <h3>Mittens</h3>
+                                   <p class="pet-trait">Professional Napper</p>
+                                   <button class="btn btn-secondary open-modal-btn" data-pet="mittens">View Profile</button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="carousel-slide" data-pet="buster">
+                           <div class="resident-card-new">
+                               <div class="card-image-wrap">
+                                   <img src="Buster.webp" alt="A friendly dog named Buster">
+                                   <i class="hunt-icon fas fa-bone hidden" data-icon="bone"></i>
+                               </div>
+                               <div class="card-details">
+                                   <h3>Buster</h3>
+                                   <p class="pet-trait">Expert at Fetch</p>
+                                   <button class="btn btn-secondary open-modal-btn" data-pet="buster">View Profile</button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="carousel-slide" data-pet="shadow">
+                           <div class="resident-card-new">
+                               <div class="card-image-wrap">
+                                   <img src="sleek cat.webp" alt="A sleek cat named Shadow">
+                                   <i class="hunt-icon fas fa-cat hidden" data-icon="cat"></i>
+                               </div>
+                               <div class="card-details">
+                                   <h3>Shadow</h3>
+                                   <p class="pet-trait">Loves Laser Pointers</p>
+                                   <button class="btn btn-secondary open-modal-btn" data-pet="shadow">View Profile</button>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <button id="next-btn" class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+               </div>
+           </div>
+       </section>
+
+        <section id="feedback" class="section">
+            <div class="container animate-on-scroll">
+                <h2 class="text-center">Guestbook & Feedback</h2>
+                <div class="grid-feedback">
+                    <div class="feedback-input-container">
+                        <h3>Leave a Note</h3>
+                        <textarea id="note-input" rows="5" placeholder="Share your experience..."></textarea>
+                        <button id="add-note-btn" class="btn btn-primary">Add Note</button>
+                    </div>
+                    <div class="notes-display-container">
+                        <h3>What Our Visitors Say</h3>
+                        <div id="notes-container">
+                           <p id="notes-placeholder">Your sticky notes will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pet-match-quiz" class="section bg-light">
+            <div class="container animate-on-scroll">
+                <h2 class="text-center">Find Your Pawfect Match!</h2>
+                <p class="text-center">Take our fun quiz to see which of our adorable residents is your soulmate.</p>
+                <form id="personality-quiz">
+                    <div class="quiz-question">
+                        <h3>1. What's your ideal weekend activity?</h3>
+                        <div class="quiz-options">
+                            <label for="q1-homebody"><input type="radio" id="q1-homebody" name="q1" value="homebody"> A cozy movie marathon on the couch</label>
+                            <label for="q1-adventurer"><input type="radio" id="q1-adventurer" name="q1" value="adventurer"> An exciting hike or trip to the park</label>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h3>2. What's your noise level preference?</h3>
+                        <div class="quiz-options">
+                            <label for="q2-quiet"><input type="radio" id="q2-quiet" name="q2" value="quiet"> Quiet and peaceful</label>
+                            <label for="q2-lively"><input type="radio" id="q2-lively" name="q2" value="lively"> Lively and full of energy</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Find My Match</button>
+                </form>
+                <div id="quiz-results" style="display:none;" class="text-center">
+                    <h3>Your Pawfect Match Is...</h3>
+                    <div id="result-pet-card"></div>
+                </div>
+            </div>
+       </section>
+       
+        <section id="pawgress-wall" class="section">
+           <div class="container animate-on-scroll">
+               <h2 class="text-center">The Paw-gress Wall</h2>
+               <p class="text-center">Celebrating the journeys of our residents from their first day to their forever home!</p>
+               <div class="pawgress-grid">
+                   <div class="pawgress-card">
+                       <div class="pawgress-image-container">
+                           <img src="images/mittens_before.jpg" alt="Mittens before adoption">
+                           <img src="images/mittens_after.jpg" alt="Mittens after adoption">
+                           <div class="pawgress-overlay">Happily Ever After</div>
+                       </div>
+                       <div class="pawgress-details">
+                           <h3>Mittens' Journey</h3>
+                           <p>"Our quiet homebody found her perfect match! We couldn't be happier!" - The Smith Family</p>
+                       </div>
+                   </div>
+                   <div class="pawgress-card">
+                       <div class="pawgress-image-container">
+                           <img src="images/buster_before.jpg" alt="Buster before adoption">
+                           <img src="images/buster_after.jpg" alt="Buster after adoption">
+                           <div class="pawgress-overlay">Happily Ever After</div>
+                       </div>
+                       <div class="pawgress-details">
+                           <h3>Buster's Story</h3>
+                           <p>"This adventurous goofball now has a big yard and a family to play with! Thank you, Pawfect Cup!" - The Jones Family</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+        <section id="diy-treats-section" class="section bg-light">
+            <div class="container animate-on-scroll">
+                <h2 class="text-center">DIY Pet Treats 🐾</h2>
+                <p class="text-center">Whip up some delicious and healthy treats for your furry friends at home!</p>
+                <div class="recipe-grid">
+                    <div class="recipe-card flipped">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Pumpkin Peanut Butter Treats</h3>
+                                <p>A simple, three-ingredient recipe for a delicious, healthy snack.</p>
+                                <img src="https://images.unsplash.com/photo-1594895696144-88981515257a?q=80&w=1974&auto=format&fit=crop" alt="Pumpkin Treats">
+                                <button class="btn btn-secondary flip-btn" data-recipe="pumpkin">View Recipe</button>
+                            </div>
+                            <div class="card-back">
+                                <h3>Pumpkin Peanut Butter Treats</h3>
+                                <h4>Ingredients:</h4>
+                                <ul>
+                                    <li>1 cup pumpkin purée</li>
+                                    <li>1/2 cup peanut butter (xylitol-free!)</li>
+                                    <li>2 cups whole wheat flour</li>
+                                </ul>
+                                <h4>Instructions:</h4>
+                                <p>1. Preheat oven to 375°F (190°C). 2. Mix pumpkin and peanut butter. 3. Add flour until doughy. 4. Roll out and cut into shapes. 5. Bake for 20-25 minutes.</p>
+                                <button class="btn btn-secondary flip-btn">Back to Summary</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Frozen Yogurt Pops</h3>
+                                <p>A cool and refreshing treat perfect for a hot summer day.</p>
+                                <img src="https://images.unsplash.com/photo-1563539893322-1f4803028d8b?q=80&w=1974&auto=format&fit=crop" alt="Frozen Yogurt Pops">
+                                <button class="btn btn-secondary flip-btn" data-recipe="yogurt">View Recipe</button>
+                            </div>
+                            <div class="card-back">
+                                <h3>Frozen Yogurt Pops</h3>
+                                <h4>Ingredients:</h4>
+                                <ul>
+                                    <li>1 cup plain yogurt</li>
+                                    <li>1/2 mashed banana</li>
+                                    <li>1/4 cup mixed berries</li>
+                                </ul>
+                                <h4>Instructions:</h4>
+                                <p>1. Mash banana and mix with yogurt. 2. Stir in berries. 3. Spoon mixture into ice cube trays. 4. Freeze for a few hours until solid.</p>
+                                <button class="btn btn-secondary flip-btn">Back to Summary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scavenger-hunt-section" class="section">
+             <div class="container animate-on-scroll">
+                <h2 class="text-center">Pet Scavenger Hunt</h2>
+                <p class="text-center">Can you find the hidden icons in our residents' profiles? Find all three to win a virtual prize!</p>
+                <div class="scavenger-hunt-progress">
+                    <p>Icons Found: <span id="found-count">0</span> / 3</p>
+                </div>
+                <div class="scavenger-hunt-clues">
+                    <div class="clue-item"><i class="fas fa-coffee"></i> Coffee Bean Icon</div>
+                    <div class="clue-item"><i class="fas fa-bone"></i> Bone Icon</div>
+                    <div class="clue-item"><i class="fas fa-cat"></i> Cat Toy Icon</div>
+                </div>
+             </div>
+        </section>
+
+        <section id="pets-experience" class="pets-experience section bg-light">
+          <h2>Café + Pets Experience</h2>
+          <div class="experience-card">
+            <h3>🐶 Book-a-Buddy Table</h3>
+            <p>Reserve a table along with a specific pet’s companionship.</p>
+            <label for="pet-select-buddy">Choose your buddy:</label>
+            <select id="pet-select-buddy">
+              <option value="">--Select a Pet--</option>
+              <option value="Milo">Milo (Golden Retriever)</option>
+              <option value="Luna">Luna (Persian Cat)</option>
+              <option value="Coco">Coco (Pug)</option>
+            </select>
+            <button onclick="reserveBuddy()">Reserve Now</button>
+            <p id="buddy-message"></p>
+          </div>
+          <div class="experience-card">
+            <h3>🎉 Pet Birthday / Gotcha Day</h3>
+            <p>Celebrate your furry friend’s special day at our café!</p>
+            <label for="party-date">Select a Date:</label>
+            <input type="date" id="party-date">
+            <button onclick="bookParty()">Book Party</button>
+            <p id="party-message"></p>
+          </div>
+        </section>
+
+        <section id="events" class="section">
+            <div class="container">
+                <h2 class="animate-on-scroll text-center">Upcoming Events</h2>
+                <div class="events-grid">
+                    <div class="event-card animate-on-scroll"><div class="event-date"><span>SEP</span><strong>28</strong></div><div class="event-details"><h4>Cat Yoga Night</h4><p>Find your zen with our flexible feline friends! A relaxing yoga session for all skill levels.</p></div></div>
+                    <div class="event-card animate-on-scroll"><div class="event-date"><span>OCT</span><strong>05</strong></div><div class="event-details"><h4>Adoption Weekend Fair</h4><p>Meet even more adoptable pets from our shelter partners! Join us for a fun-filled day.</p></div></div>
+                    <div class="event-card animate-on-scroll"><div class="event-date"><span>OCT</span><strong>12</strong></div><div class="event-details"><h4>Pet Portrait Painting</h4><p>Unleash your inner artist! A guided class to paint a beautiful portrait of your own pet.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="section bg-light">
+            <div class="container animate-on-scroll text-center">
+                <h2>Book a Cuddle Session!</h2>
+                <p>Reserve your spot to meet our furry friends.</p>
+                <form class="booking-form">
+                    <input type="text" name="name" placeholder="Your Name" required> <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="date" name="date" required> <input type="time" name="time" required>
+                    <select name="guests" required><option value="">Number of Guests</option><option value="1">1 Person</option><option value="2">2 People</option></select>
+                    <select name="zone" required><option value="">Choose a Zone</option><option value="patio">Dog-Friendly Patio</option><option value="sanctuary">Sanctuary Lounge</option></select>
+                    <button type="submit" class="btn btn-primary">Request Booking</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container"><p class="footer-title">The Pawfect Cup</p><p>© 2025 | Made with ❤ in Pune, Maharashtra</p><button id="open-postcard-btn" class="btn btn-secondary">Create a Digital Postcard</button></div>
+    </footer>
+
+    <div id="pet-modal" class="modal-overlay"><div class="modal-content"><button id="close-modal-btn" class="close-btn">×</button><div id="modal-body"></div></div></div>
+    <div id="menu-modal" class="modal-overlay"><div class="modal-content menu-modal-content"><button id="close-menu-btn" class="close-btn">×</button><div id="menu-modal-body"></div></div></div>
+    <div id="recipe-modal" class="modal-overlay"><div class="modal-content"><button id="close-recipe-btn" class="close-btn">×</button><div id="recipe-modal-body"></div></div></div>
+    <div id="postcard-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-postcard-btn" class="close-btn">×</button>
+            <h2>Create a Digital Postcard</h2>
+            <div class="postcard-form-container">
+                <div class="postcard-preview">
+                    <img id="postcard-pet-image" src="images/mittens.jpg" alt="Postcard Pet">
+                    <p id="postcard-message">Sending you some love from The Pawfect Cup!</p>
+                </div>
+                <div class="postcard-controls">
+                    <label for="pet-select-postcard">Choose a Pet:</label>
+                    <select id="pet-select-postcard">
+                        <option value="mittens">Mittens</option>
+                        <option value="buster">Buster</option>
+                        <option value="shadow">Shadow</option>
+                    </select>
+                    <label for="message-input">Your Message:</label>
+                    <textarea id="message-input" placeholder="Enter your custom message..."></textarea>
+                    <button class="btn btn-primary">Share Postcard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
